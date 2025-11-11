@@ -22,8 +22,8 @@ A simple Qt-based calculator application with a 4x5 button layout.
 Where:
 - `←` is the backspace button
 - `0` spans two columns
-- `+` spans two rows (aligned with rows 2 and 3)
-- `=` spans two rows (aligned with rows 4 and 5)
+- `+` spans two rows (aligned with rows 1 and 2)
+- `=` spans two rows (aligned with rows 3 and 4)
 
 ## Building
 
