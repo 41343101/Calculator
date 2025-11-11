@@ -34,7 +34,7 @@ Calculator::Calculator(QWidget *parent)
     buttonLayout->addWidget(createButton("7", SLOT(digitClicked())), 1, 0);
     buttonLayout->addWidget(createButton("8", SLOT(digitClicked())), 1, 1);
     buttonLayout->addWidget(createButton("9", SLOT(digitClicked())), 1, 2);
-    buttonLayout->addWidget(createButton("+", SLOT(operatorClicked())), 1, 3);
+    buttonLayout->addWidget(createButton("+", SLOT(operatorClicked())), 1, 3, 2, 1);
     
     // Row 2: [4][5][6]
     buttonLayout->addWidget(createButton("4", SLOT(digitClicked())), 2, 0);

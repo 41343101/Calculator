@@ -14,15 +14,16 @@ A simple Qt-based calculator application with a 4x5 button layout.
 ```
 [←] [/] [*] [-]
 [7] [8] [9] [+]
-[4] [5] [6]
+[4] [5] [6] [+]
 [1] [2] [3] [=]
-[  0  ] [.]
+[  0  ] [.] [=]
 ```
 
 Where:
 - `←` is the backspace button
 - `0` spans two columns
-- `=` spans two rows (aligned with rows 4 and 5)
+- `+` spans two rows (rows 1 and 2)
+- `=` spans two rows (rows 3 and 4)
 
 ## Building
 
