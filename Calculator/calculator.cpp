@@ -40,7 +40,7 @@ Calculator::Calculator(QWidget *parent)
     buttonLayout->addWidget(createButton("4", SLOT(digitClicked())), 2, 0);
     buttonLayout->addWidget(createButton("5", SLOT(digitClicked())), 2, 1);
     buttonLayout->addWidget(createButton("6", SLOT(digitClicked())), 2, 2);
-    
+
     // Row 3: [1][2][3][=]
     buttonLayout->addWidget(createButton("1", SLOT(digitClicked())), 3, 0);
     buttonLayout->addWidget(createButton("2", SLOT(digitClicked())), 3, 1);
@@ -51,7 +51,7 @@ Calculator::Calculator(QWidget *parent)
     buttonLayout->addWidget(createButton("C", SLOT(clearClicked())), 4, 0);
     buttonLayout->addWidget(createButton("0", SLOT(digitClicked())), 4, 1);
     buttonLayout->addWidget(createButton(".", SLOT(decimalClicked())), 4, 2);
-    
+
     // Main layout
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(display);
@@ -66,12 +66,14 @@ QPushButton *Calculator::createButton(const QString &text, const char *member)
 {
     QPushButton *button = new QPushButton(text);
     button->setMinimumSize(60, 60);
+    button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding); //
     QFont font = button->font();
     font.setPointSize(font.pointSize() + 4);
     button->setFont(font);
     connect(button, SIGNAL(clicked()), this, member);
     return button;
 }
+
 
 void Calculator::digitClicked()
 {
